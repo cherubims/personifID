@@ -17,6 +17,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session, sessionmaker, relationship
 from sqlalchemy.sql import func
 
+PORT =  int(os.environ.get("PORT", 8000))
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -298,7 +300,11 @@ def get_current_user_from_token(authorization: str = Header(None), db: Session =
 # ==================== MIDDLEWARE ====================
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://127.0.0.1:3000"],
+    allow_origins=[
+        "https://personifid-frontend.onrender.com",  # update post frontend deployment
+        "http://localhost:3000",  # Keep for local development
+        "https://*.onrender.com"   # Temporary wildcard for testing
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -922,13 +928,4 @@ app.mount("/uploads", StaticFiles(directory=upload_folder), name="uploads")
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n Starting Personif-ID with SQLite - AUTHENTICATION FIXED!")
-    print("=" * 60)
-    print(" No database setup required!")
-    print(" Database file: personifid.db")
-    print(" All tables created automatically")
-    print(" Authentication issues resolved!")
-    print(" Better logging enabled!")
-    print("\nVisit: http://localhost:8000/docs")
-    print("=" * 60)
     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
