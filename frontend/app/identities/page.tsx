@@ -13,6 +13,8 @@ import { Button } from '@/components/ui/button'
 import { Identity, IdentityCreate, IdentityUpdate, Context } from '@/types'
 import { identityApi } from '@/lib/api'
 
+export const dynamic = 'force-dynamic'
+
 export default function IdentitiesPage() {
   const { token, isAuthenticated, isLoading: authLoading } = useAuth()
   const { contexts, addIdentityToContext, removeIdentityFromContext } = useContexts()
