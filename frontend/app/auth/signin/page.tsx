@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import { Suspense } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { AuthLayout } from '@/components/auth/auth-layout'
@@ -25,7 +26,9 @@ export default function SignInPage() {
   
   return (
     <AuthLayout>
-      <SignInForm />
+      <Suspense fallback={null}>
+        <SignInForm />
+      </Suspense>
     </AuthLayout>
   )
 }
