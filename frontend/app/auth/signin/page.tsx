@@ -6,6 +6,8 @@ import { useAuth } from '@/hooks/useAuth'
 import { AuthLayout } from '@/components/auth/auth-layout'
 import { SignInForm } from '@/components/auth/signin-form'
 
+export const dynamic = 'force-dynamic'
+
 export default function SignInPage() {
   const { isAuthenticated } = useAuth()
   const router = useRouter()
