@@ -1,0 +1,71 @@
+{
+  "benchmark_results": [
+    {
+      "test_name": "Identity List",
+      "total_requests": 20,
+      "average_ms": 5.25892972946167,
+      "median_ms": 4.693031311035156,
+      "min_ms": 3.7009716033935547,
+      "max_ms": 9.671926498413086,
+      "p95_ms": 9.671926498413086,
+      "p99_ms": 9.671926498413086,
+      "std_dev": 1.7124090552933648
+    },
+    {
+      "test_name": "Context List",
+      "total_requests": 20,
+      "average_ms": 3.979063034057617,
+      "median_ms": 3.87418270111084,
+      "min_ms": 3.542184829711914,
+      "max_ms": 7.026910781860352,
+      "p95_ms": 7.026910781860352,
+      "p99_ms": 7.026910781860352,
+      "std_dev": 0.7413117713686039
+    },
+    {
+      "test_name": "User Profile",
+      "total_requests": 20,
+      "average_ms": 1.6292691230773926,
+      "median_ms": 1.6382932662963867,
+      "min_ms": 1.3549327850341797,
+      "max_ms": 1.9519329071044922,
+      "p95_ms": 1.9519329071044922,
+      "p99_ms": 1.9519329071044922,
+      "std_dev": 0.16081223210837797
+    },
+    {
+      "test_name": "Identity Creation",
+      "total_requests": 20,
+      "average_ms": 3.0622005462646484,
+      "median_ms": 2.9129981994628906,
+      "min_ms": 2.512216567993164,
+      "max_ms": 6.461143493652344,
+      "p95_ms": 6.461143493652344,
+      "p99_ms": 6.461143493652344,
+      "std_dev": 0.8243567428106792
+    },
+    {
+      "test_name": "Context Creation",
+      "total_requests": 20,
+      "average_ms": 2.5297999382019043,
+      "median_ms": 2.4579763412475586,
+      "min_ms": 2.193927764892578,
+      "max_ms": 4.192113876342773,
+      "p95_ms": 4.192113876342773,
+      "p99_ms": 4.192113876342773,
+      "std_dev": 0.4124923991370305
+    }
+  ],
+  "concurrent_results": {
+    "concurrent_users": 5,
+    "successful_workflows": 0,
+    "success_rate": 0.0,
+    "average_workflow_time": 0,
+    "workflow_times": []
+  },
+  "summary": {
+    "average_response_time": 3.2918524742126465,
+    "p95_response_time": 5.860805511474609,
+    "meets_target": true
+  }
+}

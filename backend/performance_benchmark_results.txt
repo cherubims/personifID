@@ -1,0 +1,58 @@
+
+PersonifID Performance Benchmark Report
+Generated: 2025-08-16 14:17:14
+============================================================
+
+INDIVIDUAL ENDPOINT PERFORMANCE:
+
+Identity List:
+  • Average Response Time: 5.3ms
+  • 95th Percentile: 9.7ms  
+  • Min/Max: 3.7ms / 9.7ms
+  • Requests: 20
+
+Context List:
+  • Average Response Time: 4.0ms
+  • 95th Percentile: 7.0ms  
+  • Min/Max: 3.5ms / 7.0ms
+  • Requests: 20
+
+User Profile:
+  • Average Response Time: 1.6ms
+  • 95th Percentile: 2.0ms  
+  • Min/Max: 1.4ms / 2.0ms
+  • Requests: 20
+
+Identity Creation:
+  • Average Response Time: 3.1ms
+  • 95th Percentile: 6.5ms  
+  • Min/Max: 2.5ms / 6.5ms
+  • Requests: 20
+
+Context Creation:
+  • Average Response Time: 2.5ms
+  • 95th Percentile: 4.2ms  
+  • Min/Max: 2.2ms / 4.2ms
+  • Requests: 20
+
+OVERALL PERFORMANCE SUMMARY:
+  • Average API Response Time: 3.3ms
+  • Average 95th Percentile: 5.9ms
+  • Performance Target (<200ms):  PASSED
+
+CONCURRENT USER PERFORMANCE:
+  • Concurrent Users Tested: 5
+  • Successful Workflows: 0
+  • Success Rate: 0.0%
+  • Average Workflow Time: 0.0ms
+
+PERFORMANCE ANALYSIS:
+  EXCELLENT - Response times well below target
+  OPTIMIZATION NEEDED - Concurrent performance below target
+
+============================================================
+Evidence for Academic Evaluation:
+  • Total test iterations: 100
+  • Testing methodology: Automated performance benchmarking
+  • Statistical analysis: Mean, median, 95th percentile measurements
+  • Load testing: 5 concurrent user simulation
