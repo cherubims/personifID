@@ -78,54 +78,6 @@ export async function apiRequest<T = any>(
   }
 }
 
-// export async function apiRequest<T = any>(
-//   endpoint: string,
-//   options: RequestOptions = {}
-// ): Promise<T> {
-//   const { token, ...fetchOptions } = options
-  
-//   const headers: HeadersInit = {
-//     'Content-Type': 'application/json',
-//     ...options.headers,
-//   }
-  
-//   if (token) {
-//     headers['Authorization'] = `Bearer ${token}`
-//   }
-  
-//   try {
-//     const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-//       ...fetchOptions,
-//       headers,
-//     })
-    
-//     const data = await response.json().catch(() => null)
-    
-//     if (!response.ok) {
-//       throw new ApiError(
-//         data?.detail || data?.message || `Request failed with status ${response.status}`,
-//         response.status,
-//         data
-//       )
-//     }
-    
-//     return data
-//   } catch (error) {
-//     // Re-throw ApiError as is
-//     if (error instanceof ApiError) {
-//       throw error
-//     }
-    
-//     // Handle network errors
-//     if (error instanceof TypeError && error.message.includes('fetch')) {
-//       throw new Error('Cannot connect to server. Please ensure the backend is running.')
-//     }
-    
-//     // Re-throw other errors
-//     throw error
-//   }
-// }
-
 /**
  * Auth API endpoints
  */

@@ -301,9 +301,9 @@ def get_current_user_from_token(authorization: str = Header(None), db: Session =
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://personifid-frontend.onrender.com",  # update post frontend deployment
-        "http://localhost:3000",  # Keep for local development
-        "https://*.onrender.com"   # Temporary wildcard for testing
+        "https://personifid-frontend.onrender.com",
+        "http://localhost:3000",
+        "https://*.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
