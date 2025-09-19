@@ -96,7 +96,12 @@ export function IdentityForm({
     { value: 'medium', label: 'Medium', placeholder: 'medium.com/@username' },
     { value: 'website', label: 'Personal Website', placeholder: 'https://yourwebsite.com' },
     { value: 'portfolio', label: 'Portfolio', placeholder: 'https://yourportfolio.com' },
-    { value: 'blog', label: 'Blog', placeholder: 'https://yourblog.com' }
+    { value: 'blog', label: 'Blog', placeholder: 'https://yourblog.com' },
+    { value: 'twitch', label: 'Twitch', placeholder: 'twitch.tv/username' },
+    { value: 'discord', label: 'Discord', placeholder: 'Username#1234' },
+    { value: 'steam', label: 'Steam', placeholder: 'steamcommunity.com/id/username' },
+    { value: 'researchgate', label: 'ResearchGate', placeholder: 'researchgate.net/profile/Name' },
+    { value: 'company', label: 'Company Website', placeholder: 'company.com/team/yourname' },
   ]
 
   const handleSubmit = async (data: IdentityFormData) => {

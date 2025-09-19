@@ -107,8 +107,8 @@ export function IdentityResolver({ context, onResolve, onUseIdentity }: Identity
     let socialLinksScore = 50
     const socialLinks = identity.social_links || {}
     const linkCount = Object.keys(socialLinks).length
-    
-    if (contextLower.includes('professional')) {
+
+    if (contextLower.includes('professional') || contextLower.includes('work')) {
       if (socialLinks.linkedin) {
         socialLinksScore += 30
         reasons.push('LinkedIn profile available for professional networking')
@@ -116,6 +116,28 @@ export function IdentityResolver({ context, onResolve, onUseIdentity }: Identity
       if (socialLinks.github) {
         socialLinksScore += 20
         reasons.push('GitHub profile shows technical expertise')
+      }
+      if (socialLinks.company) {
+        socialLinksScore += 25
+        reasons.push('Company profile available for professional networking')
+      }
+    } else if (contextLower.includes('gaming') || contextLower.includes('esports')) {
+      if (socialLinks.twitch) {
+        socialLinksScore += 35
+        reasons.push('Twitch streaming profile available')
+      }
+      if (socialLinks.steam || socialLinks.discord) {
+        socialLinksScore += 25
+        reasons.push('Gaming platform profiles available')
+      }
+    } else if (contextLower.includes('academic') || contextLower.includes('research')) {
+      if (socialLinks.researchgate) {
+        socialLinksScore += 35
+        reasons.push('ResearchGate profile shows academic credentials')
+      }
+      if (socialLinks.linkedin) {
+        socialLinksScore += 20
+        reasons.push('LinkedIn shows professional academic networking')
       }
     } else if (contextLower.includes('social')) {
       if (socialLinks.instagram || socialLinks.twitter || socialLinks.facebook) {
@@ -128,8 +150,9 @@ export function IdentityResolver({ context, onResolve, onUseIdentity }: Identity
         reasons.push('Creative portfolio links available')
       }
     }
-    
+
     socialLinksScore = Math.min(95, socialLinksScore + (linkCount * 5))
+
 
     // 4. Usage Pattern (15% weight)
     let usageScore = 60 // Base score since we don't have historical data yet
