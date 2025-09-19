@@ -49,16 +49,46 @@ export function ContextForm({
   const [error, setError] = React.useState<string>()
   const isEditing = !!context
 
-  const commonIcons = ['📁', '💼', '👤', '🌐', '🏠', '🎓', '💡', '🎯', '🌟', '⚡']
+  const commonIcons = [
+    '💼', // Professional/Work
+    '🎨', // Creative/Art
+    '🎮', // Gaming/Esports
+    '🎓', // Academic/Education
+    '👥', // Social/Friends
+    '🌐', // Networking/Online
+    '🏠', // Personal/Family
+    '🔬', // Research/Science
+    '💻', // Tech/Programming
+    '🎵', // Music/Entertainment
+    '📸', // Photography/Media
+    '🏃', // Sports/Fitness
+    '✈️', // Travel/Adventure
+    '☕', // Casual/Coffee Culture
+    '🏥', // Healthcare/Medical
+    '💰', // Finance/Business
+    '📚', // Learning/Books
+    '🎯', // Goals/Objectives
+    '🌟', // Special/VIP
+    '⚡'  // Quick/Urgent
+  ]
+
   const commonColors = [
-    '#60A5FA', // Blue
-    '#8B5CF6', // Purple  
-    '#10B981', // Green
-    '#F59E0B', // Yellow
-    '#EF4444', // Red
-    '#06B6D4', // Cyan
-    '#F97316', // Orange
-    '#84CC16', // Lime
+    '#60A5FA', // Blue - Professional
+    '#8B5CF6', // Purple - Creative
+    '#10B981', // Green - Success/Growth
+    '#F59E0B', // Yellow - Academic/Learning
+    '#EF4444', // Red - Urgent/Important
+    '#06B6D4', // Cyan - Tech/Digital
+    '#F97316', // Orange - Social/Energy
+    '#84CC16', // Lime - Health/Fitness
+    '#EC4899', // Pink - Personal/Creative
+    '#6B7280', // Gray - Neutral/Professional
+    '#7C3AED', // Violet - Innovation
+    '#059669', // Emerald - Finance/Growth
+    '#DC2626', // Dark Red - Gaming/Competition
+    '#0891B2', // Sky Blue - Travel/Freedom
+    '#CA8A04', // Amber - Networking/Connection
+    '#9333EA'  // Bright Purple - Entertainment/Arts
   ]
 
   const handleSubmit = async (data: ContextFormData) => {
